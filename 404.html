@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Single Page App Redirect</title>
-    <script>
-      (function () {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, "", redirect);
-        } else {
-          history.replaceState(null, "", "/weather-app/");
-        }
-      })();
-    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/weather-app/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <script type="module" crossorigin src="/weather-app/assets/index-DfOda41C.js"></script>
+    <link rel="stylesheet" crossorigin href="/weather-app/assets/index-BIg-vPG5.css">
   </head>
   <body>
-    <script>
-      window.location.href = "/weather-app/";
-    </script>
+    <div id="root"></div>
   </body>
 </html>
