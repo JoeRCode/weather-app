@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Single Page App Redirect</title>
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, "", redirect);
+        } else {
+          history.replaceState(null, "", "/weather-app/");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <script>
+      window.location.href = "/weather-app/";
+    </script>
+  </body>
+</html>
